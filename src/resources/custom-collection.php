@@ -25,6 +25,11 @@ return array(
             "summary" => "Get a list of all custom collections that contain a given product",
             "responseModel" => "defaultJsonResponse",
             "parameters" => array(
+                "order"=>array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Undocumented sort order. asc or desc"
+                ),
                 "limit" => array(
                     "type" => "integer",
                     "location" => "query",
@@ -97,7 +102,35 @@ return array(
             "httpMethod" => "GET",
             "uri" => "/admin/custom_collections/count.json",
             "summary" => "Retrieve a count of all Custom Collections",
-            "responseModel" => "defaultJsonResponse"
+            "responseModel" => "defaultJsonResponse",
+            "parameters" => array(
+                "since_id" => array(
+                    "type" => "number",
+                    "location" => "query",
+                    "description" => "Restrict results to after the specified ID."
+                ),
+                "created_at_min" => array(
+	                "type" => "string",
+	                "location" => "query",
+	                "description" => "Collection created after date (format: 2008-12-31 03:00)."
+                ),
+                "created_at_max" => array(
+	                "type" => "string",
+	                "location" => "query",
+	                "description" => "Collection created before date (format: 2008-12-31 03:00)."
+                ),
+                "updated_at_min" => array(
+	                "type" => "string",
+	                "location" => "query",
+	                "description" => "Collection last updated after date (format: 2008-12-31 03:00)."
+                ),
+                "updated_at_max" => array(
+	                "type" => "string",
+	                "location" => "query",
+	                "description" => "Collection last updated before date (format: 2008-12-31 03:00)."
+                )
+            )
+            
         ),
         
         /**

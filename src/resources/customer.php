@@ -23,7 +23,88 @@ return array(
             "httpMethod" => "GET",
             "uri" => "/admin/customers.json",
             "summary" => "Retrieve all customers of a shop",
-            "responseModel" => "defaultJsonResponse"
+            "responseModel" => "defaultJsonResponse",
+            "parameters" => array(
+                "order"=>array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Undocumented sort order. asc or desc"
+                ),
+                "limit" => array(
+                    "type" => "number",
+                    "location" => "query",
+                    "description" => "Amount of results (default: 50) (maximum: 250)."
+                ),
+                "page" => array(
+                    "type" => "number",
+                    "location" => "query",
+                    "description" => "Page to show (default: 1)."
+                ),
+                "since_id" => array(
+                    "type" => "number",
+                    "location" => "query",
+                    "description" => "Restrict results to after the specified ID."
+                ),
+                "created_at_min" => array(
+	                "type" => "string",
+	                "location" => "query",
+	                "description" => "Customers created after date (format: 2008-12-31 03:00)."
+                ),
+                "created_at_max" => array(
+	                "type" => "string",
+	                "location" => "query",
+	                "description" => "Customers created before date (format: 2008-12-31 03:00)."
+                ),
+                "updated_at_min" => array(
+	                "type" => "string",
+	                "location" => "query",
+	                "description" => "Customers last updated after date (format: 2008-12-31 03:00)."
+                ),
+                "updated_at_max" => array(
+	                "type" => "string",
+	                "location" => "query",
+	                "description" => "Customers last updated before date (format: 2008-12-31 03:00)."
+                )
+            )
+        ),
+        
+        /**
+         *    getCustomerCount() method
+         *
+         *    reference: http://docs.shopify.com/api/customer
+         */
+        "getCustomerCount" => array(
+            "httpMethod" => "GET",
+            "uri" => "/admin/customers/count.json",
+            "summary" => "Retrieve a count of customers of a shop",
+            "responseModel" => "defaultJsonResponse",
+            "parameters" => array(
+                "since_id" => array(
+                    "type" => "number",
+                    "location" => "query",
+                    "description" => "Restrict results to after the specified ID."
+                ),
+                "created_at_min" => array(
+	                "type" => "string",
+	                "location" => "query",
+	                "description" => "Customers created after date (format: 2008-12-31 03:00)."
+                ),
+                "created_at_max" => array(
+	                "type" => "string",
+	                "location" => "query",
+	                "description" => "Customers created before date (format: 2008-12-31 03:00)."
+                ),
+                "updated_at_min" => array(
+	                "type" => "string",
+	                "location" => "query",
+	                "description" => "Customers last updated after date (format: 2008-12-31 03:00)."
+                ),
+                "updated_at_max" => array(
+	                "type" => "string",
+	                "location" => "query",
+	                "description" => "Customers last updated before date (format: 2008-12-31 03:00)."
+                )
+            )
         ),
         
         /**
@@ -73,13 +154,13 @@ return array(
          */
         "getCustomer" => array(
             "httpMethod" => "GET",
-            "uri" => "/admin/customers/{id}.json",
+            "uri" => "/admin/customers.json",
             "summary" => "Retrieve a single Customer",
             "responseModel" => "defaultJsonResponse",
             "parameters" => array(
                 "id" => array(
                     "type" => "string",
-                    "location" => "uri",
+                    "location" => "query",
                     "description" => "The ID of the Customer."
                 )
             )

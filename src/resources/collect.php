@@ -52,8 +52,8 @@ return array(
                 )
             )
         ),
-
-
+        
+        
         /**
          *    getCollectCount() method
          *
@@ -77,8 +77,8 @@ return array(
                 )
             )
         ),
-
-
+        
+        
         /**
          *    getCollect() method
          *
@@ -103,7 +103,7 @@ return array(
                 )
             )
         ),
-
+        
         /**
          *    createCollect() method
          *
@@ -122,7 +122,7 @@ return array(
                                     "type" => "number",
                                     "location" => "json",
                                     "description" => "The product id for this Collect"
-                                ),
+    ),
                                 "collection_id" => array(
                                     "type" => "number",
                                     "location" => "json",

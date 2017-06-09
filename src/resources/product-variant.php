@@ -71,6 +71,11 @@ return array(
                     "location" => "uri",
                     "description" => "The ID of hte product.",
                     "required" => true
+                ),
+                "since_id" => array(
+                    "type" => "number",
+                    "location" => "query",
+                    "description" => "Restrict results to after the specified ID,"
                 )
             )
         ),
@@ -412,7 +417,7 @@ return array(
                     "location" => "uri",
                     "description" => "Query parameters i.e sku:HELLOWORLD",
                     "required" => true
-                )
+        )
             )
         )
 

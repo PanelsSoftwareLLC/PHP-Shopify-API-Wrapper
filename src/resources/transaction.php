@@ -43,7 +43,7 @@ return array(
                 )
             )
         ),
-
+        
 
         /**
          *    getTransactionCount() method
@@ -65,7 +65,7 @@ return array(
             )
         ),
 
-
+        
         /**
          *    getTransaction() method
          *
@@ -247,10 +247,10 @@ return array(
                     "location" => "uri",
                     "description" => "The ID of the webhook.",
                     "required" => true
-                )
+                )             
             )
         ),
-
+        
     ),
 
     /*

@@ -77,8 +77,8 @@ return array(
                 ),
             )
         ),
-
-
+        
+        
         /**
          *    getProductMetafields() method
          *
@@ -98,8 +98,8 @@ return array(
                 )
             )
         ),
-
-
+        
+        
         /**
          *    getProductVariantMetafields() method
          *
@@ -132,8 +132,8 @@ return array(
             "summary" => "Get a count of metafields that belong to a store",
             "responseModel" => "defaultJsonResponse"
         ),
-
-
+        
+        
         /**
          *    getProductMetafieldsCount() method
          *
@@ -153,8 +153,8 @@ return array(
                 )
             )
         ),
-
-
+        
+        
         /**
          *    getProductVariantMetafieldsCount() method
          *
@@ -195,8 +195,8 @@ return array(
                 )
             )
         ),
-
-
+        
+        
         /**
          *    getProductMetafield() method
          *
@@ -222,9 +222,9 @@ return array(
                 )
             )
         ),
-
-
-        /**
+        
+        
+         /**
          *    getProductMetafield() method
          *
          *    reference: http://docs.shopify.com/api/metafield
@@ -286,11 +286,11 @@ return array(
 		                    "description" => "The Value Type of the Metafield."
 		                )
 					)
-	            )
+	            )               
             )
         ),
-
-
+        
+        
          /**
          *    createProductMetafield() method
          *
@@ -332,11 +332,11 @@ return array(
 		                    "description" => "The Value Type of the Metafield."
 		                )
 					)
-	            )
+	            )               
             )
         ),
-
-
+        
+        
         /**
          *    createProductVariantMetafield() method
          *
@@ -419,11 +419,11 @@ return array(
 		                    "description" => "The Value Type of the Metafield."
 		                )
 					)
-	            )
+	            )               
             )
         ),
-
-
+        
+        
         /**
          *    updateProductMetafield() method
          *
@@ -466,11 +466,11 @@ return array(
 		                    "description" => "The Value Type of the Metafield."
 		                )
 					)
-	            )
+	            )               
             )
         ),
-
-
+        
+        
         /**
          *    updateProductVariantMetafield() method
          *
@@ -534,11 +534,11 @@ return array(
                     "location" => "uri",
                     "description" => "The ID of the Metafield.",
                     "required" => true
-                )
+                )             
             )
         ),
-
-
+        
+        
         /**
          *    deleteProductMetafield() method
          *
@@ -561,10 +561,10 @@ return array(
                     "location" => "uri",
                     "description" => "The ID of the Metafield.",
                     "required" => true
-                )
+                )             
             )
         ),
-
+        
 
         /**
          *    deleteProductVariantMetafield() method
@@ -582,7 +582,7 @@ return array(
                     "location" => "uri",
                     "description" => "The ID of the Variant.",
                     "required" => true
-                ),
+    ),
                 "metafieldId" => array(
                     "type" => "number",
                     "location" => "uri",

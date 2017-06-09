@@ -94,12 +94,22 @@ return array(
          *
          *    reference: http://docs.shopify.com/api/smartcollection
          */
-        "getSmartCollectionsCount" => array(
+        "getSmartCollectionCount" => array(
             "httpMethod" => "GET",
             "uri" => "/admin/smart_collections/count.json",
             "summary" => "Get a count of all smart collections that contain a given product.",
             "responseModel" => "defaultJsonResponse",
             "parameters" => array(
+                "order"=>array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Undocumented sort order. asc or desc"
+                ),
+                "since_id" => array(
+                    "type" => "number",
+                    "location" => "query",
+                    "description" => "Restrict results to after the specified ID."
+                ),
                 "title" => array(
                     "type" => "string",
                     "location" => "query",

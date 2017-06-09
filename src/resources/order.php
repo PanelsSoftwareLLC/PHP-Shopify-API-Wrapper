@@ -14,7 +14,7 @@ return array(
 
     "operations" => array(
 
-		/**
+        /**
 		 *    getOrderMetaFields() method
 		 *
 		 *    reference: there is no docs???
@@ -44,6 +44,11 @@ return array(
             "summary" => "Retrieve a list of Orders (OPEN Orders by default, use status=any for ALL orders).",
             "responseModel" => "defaultJsonResponse",
             "parameters" => array(
+                "order"=>array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Undocumented sort order. asc or desc"
+                ),
                 "ids" => array(
                     "type" => "string",
                     "location" => "query",
@@ -159,6 +164,11 @@ return array(
             "summary" => "Retrieve a count of all the orders.",
             "responseModel" => "defaultJsonResponse",
             "parameters" => array(
+                "since_id" => array(
+                    "type" => "number",
+                    "location" => "query",
+                    "description" => "Restrict results to after the specified ID."
+                ),
                 "created_at_min" => array(
 	                "type" => "string",
 	                "location" => "query",

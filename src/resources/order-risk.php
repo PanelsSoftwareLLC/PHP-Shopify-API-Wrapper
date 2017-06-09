@@ -21,7 +21,7 @@ return array(
          */
         "getOrderRisks" => array(
             "httpMethod" => "GET",
-            "uri" => "/admin/orders/{id}/risks.json",
+            "uri" => "/admin/orders/{id}/risk.json",
             "summary" => "Get a list of all Order Risks.",
             "responseModel" => "defaultJsonResponse",
             "parameters" => array(
