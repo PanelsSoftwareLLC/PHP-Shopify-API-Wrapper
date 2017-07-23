@@ -42,6 +42,7 @@ return array(
         "carrier-service",
         "checkout",
         "collect",
+        "collection-listing",
         "comment",
         "country",
         "custom-collection",
